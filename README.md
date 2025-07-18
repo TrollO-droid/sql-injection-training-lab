@@ -45,18 +45,31 @@ Bu proje, **SQL Injection (SQLi)** açığını anlamak ve pratik yapmak isteyen
    Farklı payloadlarla veritabanından veri çekmeyi deneyin.
 ### Alternatif Kurulum: Git Clone ile
 
-Projeyi zip indirmek yerine doğrudan GitHub’dan klonlamak için:
+1. Projeyi zip indirmek yerine doğrudan GitHub’dan klonlamak için:
 
 ```bash
 git clone https://github.com/TrollO-droid/sql-injection-training-lab.git
 ```
-Klonlanan dosyaları Apache web dizinine kopyalayın:
+2. Klonlanan dosyaları Apache web dizinine kopyalayın:
 
 ```bash
 sudo mkdir -p /var/www/html/sql_lab
 sudo cp -r sql-injection-training-lab/* /var/www/html/sql_lab/
 ```
+3. Veritabanını yükleyin:
 
+   ```bash
+   sudo mysql -u root < /var/www/html/sql_lab/db.sql
+   ```
+
+4. Tarayıcıdan siteyi açın:
+
+   ```
+   http://localhost/sql_lab/
+   ```
+5. URL’ye `login.php?id=1` gibi parametrelerle erişin.  
+   Burada `id` parametresi sorguda doğrudan kullanıldığı için SQL Injection açıktır.  
+   Farklı payloadlarla veritabanından veri çekmeyi deneyin.
 ---
 
 ## Amaç
