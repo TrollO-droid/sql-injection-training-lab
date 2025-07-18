@@ -48,7 +48,7 @@ Bu proje, **SQL Injection (SQLi)** açığını anlamak ve pratik yapmak isteyen
 Projeyi zip indirmek yerine doğrudan GitHub’dan klonlamak için:
 
 ```bash
-git clone https://github.com/<kullanici_adi>/sql-injection-training-lab.git
+git clone https://github.com/TrollO-droid/sql-injection-training-lab.git
 ```
 Klonlanan dosyaları Apache web dizinine kopyalayın:
 
