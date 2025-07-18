@@ -16,12 +16,11 @@ Bu proje, **SQL Injection (SQLi)** açığını anlamak ve pratik yapmak isteyen
 
 ## Kurulum ve Kullanım
 
-1. Projeyi indirin ve sunucunuzun web dizinine çıkartın:
+1. Projeyi indirin ve sunucunuzun web dizinine çıkartın(zip ile indirenler icin):
 
    ```bash
    unzip sql_vulnerable_site.zip -d /var/www/html/sql_lab
    ```
-
 2. Apache ve MySQL servislerini başlatın:
 
    ```bash
@@ -44,6 +43,19 @@ Bu proje, **SQL Injection (SQLi)** açığını anlamak ve pratik yapmak isteyen
 5. URL’ye `login.php?id=1` gibi parametrelerle erişin.  
    Burada `id` parametresi sorguda doğrudan kullanıldığı için SQL Injection açıktır.  
    Farklı payloadlarla veritabanından veri çekmeyi deneyin.
+### Alternatif Kurulum: Git Clone ile
+
+Projeyi zip indirmek yerine doğrudan GitHub’dan klonlamak için:
+
+```bash
+git clone https://github.com/<kullanici_adi>/sql-injection-training-lab.git
+```
+Klonlanan dosyaları Apache web dizinine kopyalayın:
+
+```bash
+sudo mkdir -p /var/www/html/sql_lab
+sudo cp -r sql-injection-training-lab/* /var/www/html/sql_lab/
+```
 
 ---
 
